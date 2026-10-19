@@ -94,7 +94,7 @@ const EVENTS_DATA = [
     img: "/images/upscale.png"
   },
   {
-    name: "Reise",
+    name: "Reise — STEM Outreach Initiative",
     organizer: "IEEE SB GEC Palakkad",
     year: "Flagship Initiative",
     category: "STEM Outreach Program",
@@ -115,6 +115,7 @@ const EVENTS_DATA = [
 
   // ==========================================
   // IEEE SB GEC PALAKKAD EVENTS (Year: 2026–27)
+  // Ordered by event date
   // ==========================================
   {
     name: "DesignVerse",
@@ -124,11 +125,11 @@ const EVENTS_DATA = [
     details:
       "DesignVerse is an event focused on design and creative innovation, providing students with opportunities to explore design concepts and develop their creative skills.",
     highlights: ["Design-focused learning and creative exploration."],
-    date: null,
+    date: "20–21/07/2026",
     speaker: null,
-    venue: null,
-    attendance: null,
-    img: null
+    venue: "CS PG Seminar Hall",
+    attendance: "42",
+    img: "/images/designverse.jpg"
   },
   {
     name: "Spectrum Talk Session 1",
@@ -136,13 +137,13 @@ const EVENTS_DATA = [
     year: "2026–27",
     category: "Technical Talk",
     details:
-      "An expert talk session designed to provide students with technical insights and knowledge sharing.",
+      "A technical talk session designed to provide students with technical insights and knowledge sharing.",
     highlights: [],
-    date: "20–21/07/2026",
-    speaker: "Aiswarya A Nair, S3 IT",
-    venue: "CS PG Seminar Hall",
-    attendance: "42",
-    img: null
+    date: "30/07/2026",
+    speaker: "Nafeesathul Raftha, S3 EEE",
+    venue: "EEE 104",
+    attendance: "32",
+    img: "/images/spectrum-talk-session-1.jpg"
   },
   {
     name: "Spectrum Talk Session 2",
@@ -152,11 +153,11 @@ const EVENTS_DATA = [
     details:
       "A technical talk session aimed at enhancing students' knowledge and awareness of emerging technologies.",
     highlights: [],
-    date: "30/07/2026",
-    speaker: null,
-    venue: "CS PG Seminar Hall",
-    attendance: "32",
-    img: null
+    date: "06/08/2026",
+    speaker: "Aiswarya A Nair, S3 IT",
+    venue: "IT 206",
+    attendance: "34",
+    img: "/images/spectrum-talk-session-2.jpg"
   },
   {
     name: "Renaissance 7.0",
@@ -166,10 +167,10 @@ const EVENTS_DATA = [
     details:
       "An event organized to encourage innovation, technical learning, and student engagement.",
     highlights: [],
-    date: "06/08/2026",
-    speaker: "Nafeesathul Raftha, S3 EEE",
+    date: "04/09/2026",
+    speaker: "LINK TEAM",
     venue: "CS PG Seminar Hall",
-    attendance: "34",
+    attendance: "75",
     img: null
   },
   {
@@ -180,22 +181,8 @@ const EVENTS_DATA = [
     details:
       "An initiative aimed at promoting awareness, inclusivity, and opportunities for students.",
     highlights: [],
-    date: "04/09/2026",
-    speaker: "LINK TEAM",
-    venue: "CS PG Seminar Hall",
-    attendance: "75",
-    img: null
-  },
-  {
-    name: "IEEE Malabar Subsection",
-    organizer: "IEEE SB GEC Palakkad",
-    year: "2026–27",
-    category: "Technical Engagement",
-    details:
-      "An IEEE-related activity conducted to promote technical engagement and collaboration among members.",
-    highlights: [],
     date: "20/09/2026",
-    speaker: null,
+    speaker: "Wie Malabar Subsection",
     venue: "CS PG Seminar Hall",
     attendance: "52",
     img: null
@@ -216,7 +203,7 @@ const EVENTS_DATA = [
     speaker: null,
     venue: "Online",
     attendance: "8",
-    img: null
+    img: "/images/world-health-day-quiz.jpg"
   },
   {
     name: "Cancer Awareness Session",
@@ -230,7 +217,7 @@ const EVENTS_DATA = [
     speaker: "Dr. Divya V S",
     venue: "EEE Seminar Hall",
     attendance: "11",
-    img: null
+    img: "/images/cancer-awareness-session.jpg"
   },
   {
     name: "Magic of Composting",
@@ -244,7 +231,7 @@ const EVENTS_DATA = [
     speaker: "Madhumita Dinesh",
     venue: "EEE Seminar Hall",
     attendance: "11",
-    img: null
+    img: "/images/magic-of-composting.jpg"
   },
   {
     name: "IIT Palakkad Visit",
@@ -272,7 +259,7 @@ const EVENTS_DATA = [
     speaker: null,
     venue: "College",
     attendance: "17",
-    img: null
+    img: "/images/reise.jpg"
   },
   {
     name: "Kusruthikalam",
@@ -286,7 +273,7 @@ const EVENTS_DATA = [
     speaker: "Prof. Ramanujam R & Prof. Indumathi R",
     venue: "ECE Seminar Hall",
     attendance: "16",
-    img: null
+    img: "/images/kusruthikalam.jpg"
   },
 
   // ==========================================
@@ -305,7 +292,7 @@ const EVENTS_DATA = [
       "Prof. Vidhun V R, Assistant Professor, Mechanical Engineering, GEC Palakkad",
     venue: "Online (Google Meet)",
     attendance: null,
-    img: null
+    img: "/images/hydronova-session-1.jpg"
   },
   {
     name: "Hydronova — Session 2",
@@ -320,7 +307,7 @@ const EVENTS_DATA = [
       "Dr. Arun B S, Assistant Professor, Mechanical Engineering, GEC Palakkad",
     venue: "Online (Google Meet)",
     attendance: null,
-    img: null
+    img: "/images/hydronova-session-2.jpg"
   },
   {
     name: "Ecoquest",
@@ -475,19 +462,17 @@ const Events = () => {
                 key={tab.id}
                 type="button"
                 onClick={() => handleTabChange(tab.id)}
-                className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 border flex items-center gap-1.5 cursor-pointer ${
-                  isSelected
-                    ? "bg-slate-900 text-white border-slate-900 shadow-sm"
-                    : "bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50"
-                }`}
+                className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 border flex items-center gap-1.5 cursor-pointer ${isSelected
+                  ? "bg-slate-900 text-white border-slate-900 shadow-sm"
+                  : "bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50"
+                  }`}
               >
                 <span>{tab.label}</span>
                 <span
-                  className={`px-1.5 py-0.2 rounded-full text-[11px] font-semibold ${
-                    isSelected
-                      ? "bg-white/20 text-white"
-                      : "bg-slate-100 text-slate-500"
-                  }`}
+                  className={`px-1.5 py-0.2 rounded-full text-[11px] font-semibold ${isSelected
+                    ? "bg-white/20 text-white"
+                    : "bg-slate-100 text-slate-500"
+                    }`}
                 >
                   {count}
                 </span>
@@ -538,57 +523,57 @@ const Events = () => {
                   activeEvent.speaker ||
                   activeEvent.venue ||
                   activeEvent.attendance) && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-xs text-slate-700">
-                    {activeEvent.date && (
-                      <div className="flex items-start gap-2">
-                        <Calendar className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
-                        <div>
-                          <span className="font-semibold text-slate-900 block">
-                            Date
-                          </span>
-                          <span className="text-slate-600">{activeEvent.date}</span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-xs text-slate-700">
+                      {activeEvent.date && (
+                        <div className="flex items-start gap-2">
+                          <Calendar className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+                          <div>
+                            <span className="font-semibold text-slate-900 block">
+                              Date
+                            </span>
+                            <span className="text-slate-600">{activeEvent.date}</span>
+                          </div>
                         </div>
-                      </div>
-                    )}
-                    {activeEvent.venue && (
-                      <div className="flex items-start gap-2">
-                        <MapPin className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
-                        <div>
-                          <span className="font-semibold text-slate-900 block">
-                            Venue
-                          </span>
-                          <span className="text-slate-600">{activeEvent.venue}</span>
+                      )}
+                      {activeEvent.venue && (
+                        <div className="flex items-start gap-2">
+                          <MapPin className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+                          <div>
+                            <span className="font-semibold text-slate-900 block">
+                              Venue
+                            </span>
+                            <span className="text-slate-600">{activeEvent.venue}</span>
+                          </div>
                         </div>
-                      </div>
-                    )}
-                    {activeEvent.speaker && (
-                      <div className="flex items-start gap-2 sm:col-span-2">
-                        <User className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
-                        <div>
-                          <span className="font-semibold text-slate-900 block">
-                            Speaker
-                          </span>
-                          <span className="text-slate-600">
-                            {activeEvent.speaker}
-                          </span>
+                      )}
+                      {activeEvent.speaker && (
+                        <div className="flex items-start gap-2 sm:col-span-2">
+                          <User className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+                          <div>
+                            <span className="font-semibold text-slate-900 block">
+                              Speaker
+                            </span>
+                            <span className="text-slate-600">
+                              {activeEvent.speaker}
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    )}
-                    {activeEvent.attendance && (
-                      <div className="flex items-start gap-2">
-                        <Users className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
-                        <div>
-                          <span className="font-semibold text-slate-900 block">
-                            Members Present
-                          </span>
-                          <span className="text-slate-600">
-                            {activeEvent.attendance}
-                          </span>
+                      )}
+                      {activeEvent.attendance && (
+                        <div className="flex items-start gap-2">
+                          <Users className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+                          <div>
+                            <span className="font-semibold text-slate-900 block">
+                              Members Present
+                            </span>
+                            <span className="text-slate-600">
+                              {activeEvent.attendance}
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    )}
-                  </div>
-                )}
+                      )}
+                    </div>
+                  )}
 
                 {/* Highlights Bullet List (if available) */}
                 {activeEvent.highlights &&
@@ -710,5 +695,4 @@ const Events = () => {
     </section>
   );
 };
-
 export default Events;
